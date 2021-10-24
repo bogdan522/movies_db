@@ -39,5 +39,16 @@ namespace Controllers.MoviesControllers
         {
             return movieCollection.Find(q => q.Imdb.Rating == rating).ToList();
         }
+
+        [HttpGet("tomatoes/viewer_rating")]
+        public IEnumerable<Movies> GetTomatoViewerRating(double rating){
+            return movieCollection.Find(q => q.Tomatoes.Viewer.Rating == rating).ToList();
+        }
+        [HttpGet("tomatoes/critic_rating")]
+        public IEnumerable<Movies> GetTomatoCriticRating(double rating){
+            return movieCollection.Find(q => q.Tomatoes.Critic.Rating == rating).ToList();
+        }
+
+        
     }
 }

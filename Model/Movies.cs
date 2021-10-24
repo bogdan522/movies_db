@@ -2,6 +2,7 @@ using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Model.ImdbRatings;
+using Model.TomatoesRatings;
 
 namespace Model.Movies
 {
@@ -18,6 +19,9 @@ namespace Model.Movies
         public int Year { get; set; }
         [BsonElement("imdb")]
         public Imdb Imdb { get; set; }
+        [BsonElement("tomatoes")]
+        public Tomatoes Tomatoes { get; set; }
+
          
     }
 }
